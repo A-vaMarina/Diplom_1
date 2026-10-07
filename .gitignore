@@ -35,14 +35,6 @@ out/
 
 # ========== Тестирование и отчеты ==========
 .pytest_cache/
-.tox/
-.coverage
-htmlcov/
-*.cover
-
-reports/
-logs/
-test-results/
 
 # ========== OS ==========
 .DS_Store
