@@ -31,7 +31,8 @@ out/
 
 # VS Code
 .vscode/
-*.code-workspace*.code-search
+*.code-workspace
+*.code-search
 
 # ========== Тестирование и отчеты ==========
 .pytest_cache/
