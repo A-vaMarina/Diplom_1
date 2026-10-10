@@ -1,7 +1,6 @@
-import pytest
-
 from unittest.mock import Mock
-from praktikum.burger import Burger
+
+import pytest
 
 
 class TestBurger:
@@ -37,7 +36,7 @@ class TestBurger:
         burger.add_ingredient(mock_ingredient_sauce)
         burger.add_ingredient(mock_ingredient_filling)
         burger.move_ingredient(1, 0)
-        assert burger.ingredients == [mock_ingredient_filling, mock_ingredient_sauce]    
+        assert burger.ingredients == [mock_ingredient_filling, mock_ingredient_sauce]
 
     @pytest.mark.parametrize(
         "bun_price, ingredient_prices, total_price",
