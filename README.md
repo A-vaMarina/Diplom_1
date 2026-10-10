@@ -20,8 +20,9 @@
 - `test_init_ingredients_is_empty_list` — проверяет, что после создания бургера список ингредиентов пуст.
 - `test_set_buns_bun_is_set` — проверяет, что после вызова `set_buns` атрибут `bun` хранит переданную булочку.
 - `test_add_ingredient_two_ingredients_second_added_to_end` — проверяет, что второй ингредиент добавляется в конец списка ингредиентов.
-- `test_remove_ingredient_zero_index_ingredient_removed` — проверяет, что ингредиент с индексом 0 удаляется из списка.
-- `test_move_ingredient_second_to_first_order_changed` — проверяет, что второй ингредиент перемещается на первую позицию в списке.
+- `test_add_ingredient_any_type_ingredient_added` — проверяет, что ингредиент любого типа (соус, начинка) добавляется в список ингредиентов (параметризованный тест).
+- `test_remove_ingredient_middle_index_ingredient_removed` — проверяет, что ингредиент из середины списка удаляется, а остальные сохраняют порядок.
+- `test_move_ingredient_new_index_order_changed` — проверяет перемещение ингредиента вперёд (с начала в конец), назад (с конца в начало) и на то же место (параметризованный тест).
 - `test_get_price_buns_and_ingredients_total_price_calculated` — проверяет, что цена бургера равна цене булочки × 2 плюс сумма цен ингредиентов (параметризованный тест).
 - `test_get_receipt_buns_with_two_ingredients_receipt_formed` — проверяет, что чек содержит булочку, два ингредиента и цену.
 
