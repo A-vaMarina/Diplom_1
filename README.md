@@ -4,14 +4,27 @@
 
 ### Реализованные сценарии
 
-Созданы юнит-тесты, покрывающие классы `Bun`, `Burger`, `Ingredient`, `Database`
+Созданы юнит-тесты, покрывающие класс `Burger`
 
 Процент покрытия 100% (отчет: `htmlcov/index.html`)
 
 ### Структура проекта
 
-- `praktikum` - пакет, содержащий код программы
-- `tests` - пакет, содержащий тесты, разделенные по классам. Например, `bun_test.py`, `burger_test.py` и т.д.
+- `praktikum` — пакет, содержащий код программы.
+- `tests` — пакет, содержащий тесты, покрывающие класс `Burger` (файл `test_burger.py`).
+- `htmlcov` — папка с HTML-отчётом о покрытии.
+
+### Описание тестов
+
+- `test_init_bun_is_none` — проверяет, что после создания бургера булочка не установлена.
+- `test_init_ingredients_is_empty_list` — проверяет, что после создания бургера список ингредиентов пуст.
+- `test_set_buns_bun_is_set` — проверяет, что после вызова `set_buns` атрибут `bun` хранит переданную булочку.
+- `test_add_ingredient_two_ingredients_second_added_to_end` — проверяет, что второй ингредиент добавляется в конец списка ингредиентов.
+- `test_add_ingredient_any_type_ingredient_added` — проверяет, что ингредиент любого типа (соус, начинка) добавляется в список ингредиентов (параметризованный тест).
+- `test_remove_ingredient_middle_index_ingredient_removed` — проверяет, что ингредиент из середины списка удаляется, а остальные сохраняют порядок.
+- `test_move_ingredient_new_index_order_changed` — проверяет перемещение ингредиента вперёд (с начала в конец), назад (с конца в начало) и на то же место (параметризованный тест).
+- `test_get_price_buns_and_ingredients_total_price_calculated` — проверяет, что цена бургера равна цене булочки × 2 плюс сумма цен ингредиентов (параметризованный тест).
+- `test_get_receipt_buns_with_two_ingredients_receipt_formed` — проверяет, что чек содержит булочку, два ингредиента и цену.
 
 ### Запуск автотестов
 
@@ -21,4 +34,4 @@
 
 **Запуск автотестов и создание HTML-отчета о покрытии**
 
->  `$ pytest --cov=praktikum --cov-report=html`
+>  `$ pytest tests/test_burger.py --cov=praktikum.burger --cov-report=term-missing --cov-report=html`
